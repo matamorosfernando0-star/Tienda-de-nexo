@@ -1,0 +1,91 @@
+nav{
+    background-color: aqua;
+    height: 100px; ;
+    display: flex;
+    justify-content: space-between;
+
+}
+footer{
+background-color: aquamarine;
+height: 300px;
+}
+.cajaprincipal{
+    background-color: blueviolet;
+    height: 900px;
+    display: flex;
+
+}
+.cajahija1{
+    background-color: rgb(14, 190, 88);
+    width: 100%;
+    height: 300px;
+    display: flex;
+
+}
+.cajahija2{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 500px;
+    display: flex;
+
+}
+.cajanieta1{
+    background-color: rgb(252, 151, 0);
+    width: 25%;
+    height: 500px;
+    display: flex;
+
+}
+.cajanieta2{
+    background-color: rgb(201, 34, 151);
+    width: 25%;
+    height: 500px;
+    display: flex;
+
+}
+.cajanieta3{
+    background-color: rgb(79, 9, 243);
+    width: 25%;
+    height: 500px;
+    display: flex;
+}
+.cajanieta4{
+    background-color: deepskyblue;
+    width: 25%;
+    height: 500px;
+    display: flex;
+}
+.cajahija3{
+    background-color: aquamarine;
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+.cajanieta5{
+    background-color: rgb(174, 0, 255);
+    width: 25%;
+    height: 500px;
+    display: flex;
+}
+.cajanieta6{
+    background-color: rgb(0, 134, 252);
+    width: 25%;
+    height: 500px;
+    display: flex;
+}
+.cajanieta7{
+    background-color: rgb(252, 5, 190);
+    width: 25%;
+    height: 500px;
+    display: flex;
+}
+.cajanieta8{
+    background-color: rgb(0, 248, 132);
+    width: 25%;
+    height: 500px;
+    display: flex;
+}
+.botonprueba{
+    background-color: cadetblue;
+    display: flex;
+}

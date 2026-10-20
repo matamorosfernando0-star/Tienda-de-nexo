@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexo</title>
+  <link rel="stylesheet" href="/tienda_de_deportes--main/css/Tienda-de-deportes.css">
+  <link rel="icon" href="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/logo.jpg">
+  <link rel="stylesheet" href="/tienda_de_deportes--main/css/Tienda-de-deportes.css">
+</head>
+<body>
+
+  
+  <div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
+
+ 
+  <div class="carrito-panel" id="carritoPanel">
+    <div class="carrito-encabezado">
+      <h3>🛒 Tu carrito</h3>
+      <button class="btn-cerrar" onclick="cerrarCarrito()">✕</button>
+    </div>
+    <div class="carrito-items" id="carritoItems">
+      <p class="carrito-vacio">Tu carrito está vacío</p>
+    </div>
+    <div class="carrito-pie">
+      <p>Total: <strong id="carritoTotal">$0</strong></p>
+      <button class="btn-pagar" onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="imajes_de_la_tienda_de_deportes/logo.jpg" alt="Nexo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul>
+    <div class="nav-acciones">
+      <button class="btn-carrito" onclick="abrirCarrito()">
+        🛒 <span id="carritoCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <div class="hero-contenido">
+      <h1 class="hero-titulo">Equípate para <span class="neon">ganar</span></h1>
+      <p class="hero-subtitulo">Cada prenda, cada producto, hecho para rendir al máximo.</p>
+      <a href="#productos" class="btn-cta">Ver productos</a>
+    </div>
+  </section>
+
+  <section class="seccion" id="productos">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Nuestros Productos</h2>
+      <p class="seccion-subtitulo">Equipamiento de alto rendimiento para cada deporte</p>
+
+      <div class="filtros" id="filtros">
+        <button class="filtro activo" data-filtro="Todos">Todos</button>
+        <button class="filtro" data-filtro="Ropa">Ropa</button>
+        <button class="filtro" data-filtro="Calzado">Calzado</button>
+        <button class="filtro" data-filtro="Accesorios">Accesorios</button>
+        <button class="filtro" data-filtro="Equipos">Equipos</button>
+      </div>
+
+      <div class="tarjetas-grid">
+
+      
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/camisa.jpg" alt="Camisa deportiva">
+          <div class="tarjeta-info">
+            <h3>Camisa Deportiva</h3>
+            <p>Camiseta deportiva negra de cuello en V, manga corta y con costuras grises reflectantes en los costados</p>
+            <span class="precio">$80.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Gris">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/pantalon ancho.jpg" alt="Pantalón ancho">
+          <div class="tarjeta-info">
+            <h3>Pantalón Ancho</h3>
+            <p>Pantalón deportivo gris oscuro, de corte holgado, con cintura elástica, bolsillos con cremallera y detalles técnicos en las rodillas.</p>
+            <span class="precio">$65.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Calzado" data-tallas="38,39,40,41,42,43" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/zapatos.jpg" alt="Chunky Noir">
+          <div class="tarjeta-info">
+            <h3>Chunky Noir</h3>
+            <p>Tenis deportivos negros de suela gruesa y robusta, con paneles de malla transpirable y sutiles detalles en verde neón.</p>
+            <span class="precio">$95.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="Única" data-colores="Azul medianoche,Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/cyber trtuck.jpg" alt="Cyber Track">
+          <div class="tarjeta-info">
+            <h3>Cyber Track</h3>
+            <p>Kit de dispositivos inteligentes en azul medianoche y negro, que incluye dos relojes inteligentes, auriculares inalámbricos con estuche de carga y una pulsera de actividad.</p>
+            <span class="precio">$150.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Equipos" data-tallas="Única" data-colores="Gris,Turquesa">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/neon court.jpg" alt="Neon Court">
+          <div class="tarjeta-info">
+            <h3>Neon Court</h3>
+            <p>Set de tenis o pádel que incluye una raqueta gris con detalles turquesa y neón, funda deportiva a juego, bolas de color rosa y azul, cinta de agarre (grip) y gafas de sol deportivas moradas.</p>
+            <span class="precio">$55.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="XS,S,M,L" data-colores="Blanco">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo active.jpg" alt="Nexo Active">
+          <div class="tarjeta-info">
+            <h3>Nexo Active</h3>
+            <p>Camiseta deportiva de corte corto (crop) en color blanco, con mangas raglán microperforadas, paneles laterales en gris oscuro y el logo "NEXO" estampado en el pecho.</p>
+            <span class="precio">$70.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo wind.jpg" alt="Nexo Wind">
+          <div class="tarjeta-info">
+            <h3>Nexo Wind</h3>
+            <p>Rompevientos deportivo negro con textura geométrica, capucha ajustable, bolsillos funcionales y cremalleras de contraste en un llamativo color verde neón.</p>
+            <span class="precio">$35.000</span>
+          </div>
+        </div>
+
+      
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo cargo.jpg" alt="Nexo Cargo">
+          <div class="tarjeta-info">
+            <h3>Nexo Cargo</h3>
+            <p>Pantalón táctico deportivo negro con bolsillos tipo cargo, cremalleras superiores oblicuas, paneles geométricos reforzados en las piernas y franjas laterales grises reflectantes.</p>
+            <span class="precio">$90.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Negro,Gris">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo short.jpg" alt="Nexo Short">
+          <div class="tarjeta-info">
+            <h3>Nexo Short</h3>
+            <p>Short deportivo negro ligero, con cintura elástica, bolsillos laterales y tela de secado rápido.</p>
+            <span class="precio">$45.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Gris">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo hoodi.jpg" alt="Nexo Hoodie">
+          <div class="tarjeta-info">
+            <h3>Nexo Hoodie</h3>
+            <p>Sudadera con capucha gris oscuro, interior suave y logo NEXO en verde neón.</p>
+            <span class="precio">$110.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="Única" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/gorra.jpg" alt="Nexo Cap">
+          <div class="tarjeta-info">
+            <h3>Nexo Cap</h3>
+            <p>Gorra deportiva negra ajustable, con visera curva y logo bordado en neón.</p>
+            <span class="precio">$30.000</span>
+          </div>
+        </div>
+
+      
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="XS,S,M,L" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo leguing.jpg" alt="Nexo Legging">
+          <div class="tarjeta-info">
+            <h3>Nexo Legging</h3>
+            <p>Leggins deportivos negros de cintura alta, elásticos y con paneles de malla transpirable.</p>
+            <span class="precio">$60.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="XS,S,M,L" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo top.jpg" alt="Nexo Top">
+          <div class="tarjeta-info">
+            <h3>Nexo Top</h3>
+            <p>Top deportivo de soporte medio en negro, con espalda cruzada, tela elástica y costuras en verde neón.</p>
+            <span class="precio">$40.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Ropa" data-tallas="S,M,L,XL" data-colores="Gris">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo jaket.jpg" alt="Nexo Jacket">
+          <div class="tarjeta-info">
+            <h3>Nexo Jacket</h3>
+            <p>Chaqueta deportiva gris oscuro con cremallera completa, bolsillos laterales y detalles reflectantes para entrenar de noche.</p>
+            <span class="precio">$120.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="35-38,39-42,43-46" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/medias.jpg" alt="Nexo Socks">
+          <div class="tarjeta-info">
+            <h3>Nexo Socks</h3>
+            <p>Pack de 3 pares de medias deportivas negras con refuerzo en talón y punta, y tejido transpirable.</p>
+            <span class="precio">$25.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="25 L" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo pack.jpg" alt="Nexo Pack">
+          <div class="tarjeta-info">
+            <h3>Nexo Pack</h3>
+            <p>Mochila deportiva negra de 25 litros, con compartimento para zapatos, bolsillo para laptop y cierres en verde neón.</p>
+            <span class="precio">$85.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="750 ml" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/botella.jpg" alt="Nexo Bottle">
+          <div class="tarjeta-info">
+            <h3>Nexo Bottle</h3>
+            <p>Botella térmica de acero inoxidable de 750 ml en negro mate, mantiene tu bebida fría por horas.</p>
+            <span class="precio">$38.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="S,M,L" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo gri`p.jpg" alt="Nexo Grip">
+          <div class="tarjeta-info">
+            <h3>Nexo Grip</h3>
+            <p>Guantes de entrenamiento negros con palma antideslizante, cierre ajustable y soporte para la muñeca.</p>
+            <span class="precio">$32.000</span>
+          </div>
+        </div>
+
+        
+        <div class="tarjeta" data-categoria="Equipos" data-tallas="5" data-colores="Blanco,Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/balom.jpg" alt="Nexo Ball">
+          <div class="tarjeta-info">
+            <h3>Nexo Ball</h3>
+            <p>Balón de fútbol talla 5 en blanco y negro, con costuras reforzadas y detalles en verde neón.</p>
+            <span class="precio">$50.000</span>
+          </div>
+        </div>
+
+      
+        <div class="tarjeta" data-categoria="Accesorios" data-tallas="Única" data-colores="Negro">
+          <img src="/tienda_de_deportes--main/imajes_de_la_tienda_de_deportes/nexo band.jpg" alt="Nexo Band">
+          <div class="tarjeta-info">
+            <h3>Nexo Band</h3>
+            <p>Set de cintas para cabeza y muñequeras negras, absorben el sudor y se ajustan sin apretar.</p>
+            <span class="precio">$20.000</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-oscura" id="nosotros">
+    <div class="contenedor">
+      <div class="nosotros-grid">
+        <div class="nosotros-texto">
+          <h2 class="seccion-titulo">Nuestra Historia</h2>
+          <p>Nexo nació en Mosquera, Cundinamarca, cuando un grupo de jóvenes apasionados por el deporte no encontraba implementos de calidad cerca de casa.</p>
+          <p>Lo que empezó como una idea entre amigos hoy equipa a cientos de deportistas en la región. Creemos que el rendimiento empieza con el equipo correcto, y ese equipo tiene que estar al alcance de todos.</p>
+          <ul class="nosotros-datos">
+            <li><span class="dato-numero">6+</span> años de experiencia</li>
+            <li><span class="dato-numero">20+</span> variedades de productos</li>
+            <li><span class="dato-numero">100K+</span> clientes felices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-logo">Nexo</p>
+        <p>Implementos deportivos con alma colombiana.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <p>📍 Mosquera, Cundinamarca</p>
+        <p>✉️ nexo_colombia@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <a href="#">📸 Instagram</a>
+        <a href="#">👤 Facebook</a>
+        <a href="#">💬 WhatsApp</a>
+      </div>
+    </div>
+    <p class="footer-fondo">© 2025 Nexo — Todos los derechos reservados</p>
+  </footer>
+
+
+  
+  <div class="modal" id="modal">
+    <div class="modal-caja">
+      <button class="modal-cerrar" id="modalCerrar" aria-label="Cerrar">✕</button>
+      <img id="modalImg" src="" alt="">
+      <div class="modal-info">
+        <span class="modal-cat" id="modalCat"></span>
+        <h3 id="modalNombre"></h3>
+        <span class="precio" id="modalPrecio"></span>
+        <p id="modalDesc"></p>
+        <h4>Talla</h4>
+        <div class="opciones" id="modalTallas"></div>
+        <h4>Color</h4>
+        <div class="opciones" id="modalColores"></div>
+        <p class="modal-seleccion" id="modalSeleccion"></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito()">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/tienda_de_deportes--main/js/index.js"></script>
+</body>
+</html>
